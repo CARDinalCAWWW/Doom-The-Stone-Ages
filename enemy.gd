@@ -4,6 +4,9 @@ extends CharacterBody3D
 
 var SPEED = 3.0
 
+func _ready():
+	add_to_group("enemy")
+
 func _physics_process(delta: float) -> void:
 	var current_location = global_transform.origin
 	var next_location = nav_agent.get_next_path_position()

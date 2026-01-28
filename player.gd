@@ -41,6 +41,9 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("move_jump") and jumps_remaining > 1:
 		apply_central_impulse(Vector3.UP * jump_force)
 		jumps_remaining -= 1
+		
+	if Input.is_action_just_pressed("attack"):
+		$TwistPivot/PitchPivot/Bat.swing()
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
