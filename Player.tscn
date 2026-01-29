@@ -28,6 +28,6 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 [node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot"]
 
 [node name="Bat" parent="TwistPivot/PitchPivot" instance=ExtResource("2_kpjcp")]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.7093744, -0.10110688, -0.74263805)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.75, -0.101, -0.743)
 
 [node name="GroundRay" type="RayCast3D" parent="."]
