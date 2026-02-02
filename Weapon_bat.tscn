@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccphenhloi22k"]
 
-[ext_resource type="Script" uid="uid://cnx61imne41gq" path="res://weapon_bat.gd" id="1_mo3yo"]
+[ext_resource type="Script" uid="uid://cnx61imne41gq" path="res://weapon_bat.gd" id="1_egrlq"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_mo3yo"]
 top_radius = 0.1
@@ -8,10 +8,9 @@ bottom_radius = 0.05
 height = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mo3yo"]
-size = Vector3(3, 1, 4)
 
 [node name="Bat" type="Node3D"]
-script = ExtResource("1_mo3yo")
+script = ExtResource("1_egrlq")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 mesh = SubResource("CylinderMesh_mo3yo")
@@ -19,5 +18,4 @@ mesh = SubResource("CylinderMesh_mo3yo")
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.622, 0, 2.25)
 shape = SubResource("BoxShape3D_mo3yo")

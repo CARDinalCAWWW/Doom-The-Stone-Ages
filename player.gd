@@ -4,8 +4,8 @@ var mouse_sensitivity := 0.002
 var twist_input := 0.0
 var pitch_input := 0.0
 
-var move_force := 1200.0
-var jump_force := 10
+var move_force := 1100.0
+var jump_force := 8
 
 var coyote_time := .2
 var coyote_timer := 0.0
@@ -44,7 +44,10 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("attack"):
 		$TwistPivot/PitchPivot/Bat.swing()
-	
+		
+	if Input.is_action_just_pressed("throw"):
+		$TwistPivot/PitchPivot/Bat.throw()
+		
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		

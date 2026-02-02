@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccfl1e3324s72"]
 
 [ext_resource type="Script" uid="uid://dloeb6c3sias4" path="res://player.gd" id="1_xhfnw"]
-[ext_resource type="PackedScene" uid="uid://ccphenhloi22k" path="res://WeaponBat.tscn" id="2_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://ccphenhloi22k" path="res://Weapon_bat.tscn" id="2_kpjcp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0rwas"]
 
