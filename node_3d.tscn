@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6r3x2hws6nqx"]
+[gd_scene load_steps=4 format=3 uid="uid://c6r3x2hws6nqx"]
 
 [ext_resource type="Script" uid="uid://cr0pl2eb2yyuv" path="res://node_3d.gd" id="1_a202f"]
+[ext_resource type="Script" uid="uid://crb0n71heweto" path="res://WeaponSelect.gd" id="2_noarx"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_noarx"]
 viewport_path = NodePath("Sprite3D/SubViewport")
@@ -32,3 +33,19 @@ value = 100.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.827202)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_noarx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Weapon 1" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Weapon 2" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Weapon 3" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
