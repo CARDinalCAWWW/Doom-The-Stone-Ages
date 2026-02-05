@@ -1,16 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfnrmqt7ag7bv"]
 
-[ext_resource type="Script" path="res://node_3d.gd" id="1_a202f"]
-[ext_resource type="Script" path="res://WeaponSelect.gd" id="2_noarx"]
+[ext_resource type="Script" path="res://node_3d.gd" id="1_c2oh1"]
+[ext_resource type="Script" path="res://WeaponSelect.gd" id="2_2586i"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_noarx"]
 viewport_path = NodePath("Sprite3D/SubViewport")
 
-[node name="Node3D" type="Node3D"]
-script = ExtResource("1_a202f")
+[node name="Health Bar" type="Node3D"]
+script = ExtResource("1_c2oh1")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-billboard = 2
+billboard = 1
+no_depth_test = true
 texture = SubResource("ViewportTexture_noarx")
 
 [node name="SubViewport" type="SubViewport" parent="Sprite3D"]
@@ -31,11 +32,8 @@ grow_vertical = 2
 step = 0.1
 value = 100.0
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.827202)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("2_noarx")
+script = ExtResource("2_2586i")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_right = 40.0
