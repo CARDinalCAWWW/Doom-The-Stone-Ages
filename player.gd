@@ -61,7 +61,7 @@ func _physics_process(delta: float) -> void:
 		get_tree().current_scene.add_child(projectile)
 
 		# Spawn at camera/bat position
-		projectile.global_transform = $TwistPivot/PitchPivot.global_transform
+		projectile.global_transform = $TwistPivot/PitchPivot.global_transform.translated(Vector3(0, 1, 0))
 
 		# Throw forward
 		var forward: Vector3 = -$TwistPivot/PitchPivot.global_transform.basis.z
