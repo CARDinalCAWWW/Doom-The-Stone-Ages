@@ -51,7 +51,7 @@ func _physics_process(delta: float) -> void:
 			jumps_remaining -= 1
 
 	if Input.is_action_just_pressed("attack"):
-		$TwistPivot/PitchPivot/Bat.swing()
+		$TwistPivot/PitchPivot/Batw.swing()
 
 	# -------------------------
 	# THROWING
