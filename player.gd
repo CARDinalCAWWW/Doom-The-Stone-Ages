@@ -59,11 +59,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("throw"):
 		var projectile := preload("res://Weapong_throw.tscn").instantiate()
 		get_tree().current_scene.add_child(projectile)
-
-		# Spawn at camera/bat position
-		projectile.global_transform = $TwistPivot/PitchPivot.global_transform
-
-		# Throw forward
+		
+		var cam := $TwistPivot/PitchPivot/Camera3D
+		
+		var spawn_transform : Transform3D = cam.global_transform
+		spawn_transform.origin += -cam.global_transform.basis.z
+		projectile.global_transform = spawn_transform
+		
 		var forward: Vector3 = -$TwistPivot/PitchPivot.global_transform.basis.z
 		projectile.apply_central_impulse(forward * 20.0)
 

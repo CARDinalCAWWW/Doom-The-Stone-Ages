@@ -154,7 +154,7 @@ uv2_scale = Vector3(3, 3, 3)
 uv2_offset = Vector3(0, 3, 0)
 uv2_triplanar = true
 
-[node name="Node3D" type="Node3D"]
+[node name="Level" type="Node3D"]
 script = ExtResource("1_t7iv1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

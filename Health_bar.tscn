@@ -1,13 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfnrmqt7ag7bv"]
-
-[ext_resource type="Script" path="res://node_3d.gd" id="1_c2oh1"]
-[ext_resource type="Script" path="res://WeaponSelect.gd" id="2_2586i"]
+[gd_scene load_steps=2 format=3 uid="uid://dfnrmqt7ag7bv"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_noarx"]
 viewport_path = NodePath("Sprite3D/SubViewport")
 
 [node name="Health Bar" type="Node3D"]
-script = ExtResource("1_c2oh1")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 billboard = 1
@@ -33,7 +29,6 @@ step = 0.1
 value = 100.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("2_2586i")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_right = 40.0

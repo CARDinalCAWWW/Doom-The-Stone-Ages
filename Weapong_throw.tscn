@@ -10,6 +10,7 @@ height = 0.5
 radius = 0.278549
 
 [node name="Ball" type="RigidBody3D"]
+mass = 0.5
 script = ExtResource("1_ra4ok")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]

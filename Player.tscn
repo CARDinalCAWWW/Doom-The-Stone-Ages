@@ -30,8 +30,10 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Health Bar" parent="TwistPivot/PitchPivot/Camera3D" instance=ExtResource("2_kne1u")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 3, -5)
+script = null
 
 [node name="Bat" parent="TwistPivot/PitchPivot" instance=ExtResource("2_kpjcp")]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.75, -0.101, -0.743)
 
 [node name="GroundRay" type="RayCast3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, 0, -0.1, 0)
